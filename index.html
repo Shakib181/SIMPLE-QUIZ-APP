@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPLE QUIZ APP</title>
+    <style>
+        form{
+            width: 400px;
+            height: 725px;
+            margin: auto;
+            background-color: yellowgreen;
+            box-shadow: 4px 6px 10px black;
+            border-radius: 10px;
+        }
+        p{
+            padding: 10px;
+        }
+        input{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            color: blueviolet;
+        }
+        button{
+            background-color: rgb(54, 45, 42);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 50%;
+            box-shadow: 3px 4px 6px black;
+            margin-bottom: 4px;
+            color: white;
+        }
+    </style>
+   
+</head>
+<body>
+   <form action="">
+    <h1>Simple Quiz</h1>
+    <hr>
+    <p>Q1. What is 1 + 1 = ?</p>
+   <input type="radio" name="q1" id="id1">2 <br>
+   <input type="radio" name="q1" id="">3 <br>
+   <input type="radio" name="q1" id="">6 <br>
+   <input type="radio" name="q1" id="">8 <br>
+
+   <p>Q2. What is 5 + 1 = ?</p>
+   <input type="radio" name="q2" id="">2 <br>
+   <input type="radio" name="q2" id="id2">6 <br>
+   <input type="radio" name="q2" id="">8 <br>
+   <input type="radio" name="q2" id="">5 <br>
+
+   <p>Q3. What is 9 + 1 = ?</p>
+   <input type="radio" name="q3" id="">8 <br>
+   <input type="radio" name="q3" id="">0 <br>
+   <input type="radio" name="q3" id="id3">10 <br>
+   <input type="radio" name="q3" id="">11 <br>
+
+   <p>Q1. What is 10 + 1 = ?</p>
+   <input type="radio" name="q4" id="">12 <br>
+   <input type="radio" name="q4" id="id4">11 <br>
+   <input type="radio" name="q4" id="">9 <br>
+   <input type="radio" name="q4" id="">8 <br><br>
+
+   <button id="submit">Submit</button>
+   </form>
+
+   <script>
+    var Submit = document.getElementById("submit");
+    Submit.addEventListener('click', function(){
+        var q1 = document.getElementById("id1").checked;
+        var q2 = document.getElementById("id2").checked;
+        var q3 = document.getElementById("id3").checked;
+        var q4 = document.getElementById("id4").checked;
+
+        var count = 0;
+        if(q1){
+            count++;
+        }
+        if(q2){
+            count++;
+        }
+        if(q3){
+            count++;
+        }
+        if(q4){
+            count++;
+        }
+        alert('Your Score is '+count);
+    })
+   </script>
+</body>
+</html>
